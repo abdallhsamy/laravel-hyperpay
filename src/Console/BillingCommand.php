@@ -1,6 +1,6 @@
 <?php
 
-namespace Devinweb\LaravelHyperpay\Console;
+namespace Abdallhsamy\LaravelHyperpay\Console;
 
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Filesystem\Filesystem;

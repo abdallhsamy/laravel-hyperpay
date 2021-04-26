@@ -1,8 +1,8 @@
 <?php
 
-namespace Devinweb\LaravelHyperpay\Tests;
+namespace Abdallhsamy\LaravelHyperpay\Tests;
 
-use Devinweb\LaravelHyperpay\LaravelHyperpayServiceProvider;
+use Abdallhsamy\LaravelHyperpay\LaravelHyperpayServiceProvider;
 use Orchestra\Testbench\TestCase;
 
 class ExampleTest extends TestCase

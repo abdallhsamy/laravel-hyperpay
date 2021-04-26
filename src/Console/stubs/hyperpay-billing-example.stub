@@ -2,7 +2,7 @@
 
 namespace App\Billing;
 
-use Devinweb\LaravelHyperpay\Contracts\BillingInterface;
+use Abdallhsamy\LaravelHyperpay\Contracts\BillingInterface;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
@@ -41,7 +41,6 @@ class HyperPayBilling implements BillingInterface
 
     protected function getLatLng($ip)
     {
-        // $ip = "151.254.221.73";
         $response = Http::get('https://ipinfo.io/'.$ip)['loc'];
         return $response;
     }

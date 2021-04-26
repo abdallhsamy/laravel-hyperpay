@@ -1,8 +1,8 @@
 <?php
 
-namespace Devinweb\LaravelHyperpay;
+namespace Abdallhsamy\LaravelHyperpay;
 
-use Devinweb\LaravelHyperpay\Console\BillingCommand;
+use Abdallhsamy\LaravelHyperpay\Console\BillingCommand;
 use GuzzleHttp\Client as GuzzleClient;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
@@ -28,7 +28,7 @@ class LaravelHyperpayServiceProvider extends ServiceProvider
     {
         Route::group([
             'prefix' => 'hyperpay',
-            'namespace' => 'Devinweb\LaravelHyperpay\Http\Controllers',
+            'namespace' => 'Abdallhsamy\LaravelHyperpay\Http\Controllers',
             'as' => 'hyperpay.',
         ], function () {
             $this->loadRoutesFrom(__DIR__.'/../routes/web.php');

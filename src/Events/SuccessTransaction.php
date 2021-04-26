@@ -1,6 +1,6 @@
 <?php
 
-namespace Devinweb\LaravelHyperpay\Events;
+namespace Abdallhsamy\LaravelHyperpay\Events;
 
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Foundation\Events\Dispatchable;

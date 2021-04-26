@@ -1,8 +1,8 @@
 <?php
 
-namespace Devinweb\LaravelHyperpay\Support;
+namespace Abdallhsamy\LaravelHyperpay\Support;
 
-use Devinweb\LaravelHyperpay\Contracts\BillingInterface;
+use Abdallhsamy\LaravelHyperpay\Contracts\BillingInterface;
 use Illuminate\Database\Eloquent\Model;
 
 class HttpParameters
@@ -14,7 +14,7 @@ class HttpParameters
      * @param float $amount
      * @param Model $user
      * @param array hyperpay config file with extra data added during the process
-     * @param \Devinweb\LaravelHyperpay\Contracts\BillingInterface $billing
+     * @param \Abdallhsamy\LaravelHyperpay\Contracts\BillingInterface $billing
      *
      * @return array
      */
@@ -79,7 +79,7 @@ class HttpParameters
     /**
      * Get the billing data from the Billing class if a user generate one.
      *
-     * @param Devinweb\LaravelHyperpay\Contracts\BillingInterface $billing
+     * @param Abdallhsamy\LaravelHyperpay\Contracts\BillingInterface $billing
      *
      * @return array
      */

@@ -6,17 +6,15 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateTransactionsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('transactions', function (Blueprint $table) {
             
-            $table->string('id')->primary();
-            $table->string('user_id');
+            $table->id();
+            $table->foreignId('user_id')
+                ->nullable()
+                ->constrained('users)
+                ->cascadeOnDelete();
             $table->string('checkout_id')->unique();
             $table->string('status');
             $table->float('amount');
@@ -24,19 +22,10 @@ class CreateTransactionsTable extends Migration
             $table->json('data')->nullable();
             $table->json('trackable_data');
             $table->string('brand');
-
-            $table->foreign('user_id')->references('id')->on('users')
-                ->onUpdate('cascade')->onDelete('cascade');
-
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('transactions');

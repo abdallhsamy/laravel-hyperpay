@@ -1,9 +1,9 @@
 <?php
 
-namespace Devinweb\LaravelHyperpay\Support;
+namespace Abdallhsamy\LaravelHyperpay\Support;
 
-use Devinweb\LaravelHyperpay\Events\FailTransaction;
-use Devinweb\LaravelHyperpay\Events\SuccessTransaction;
+use Abdallhsamy\LaravelHyperpay\Events\FailTransaction;
+use Abdallhsamy\LaravelHyperpay\Events\SuccessTransaction;
 use GuzzleHttp\Psr7\Response;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;

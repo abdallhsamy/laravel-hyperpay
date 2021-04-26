@@ -1,8 +1,8 @@
 # Laravel HyperPay
 
 <a href="https://github.styleci.io/repos/347104704"><img src="https://github.styleci.io/repos/347104704/shield?branch=master" alt="StyleCI Shield"></a>
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/devinweb/laravel-hyperpay.svg?style=flat-square)](https://packagist.org/packages/devinweb/laravel-hyperpay)
-[![Total Downloads](https://img.shields.io/packagist/dt/devinweb/laravel-hyperpay.svg?style=flat-square)](https://packagist.org/packages/devinweb/laravel-hyperpay)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/abdallhsamy/laravel-hyperpay.svg?style=flat-square)](https://packagist.org/packages/abdallhsamy/laravel-hyperpay)
+[![Total Downloads](https://img.shields.io/packagist/dt/abdallhsamy/laravel-hyperpay.svg?style=flat-square)](https://packagist.org/packages/abdallhsamy/laravel-hyperpay)
 
 Laravel HyperPay provides an easy way to handle all the transactions with different states.
 
@@ -11,7 +11,7 @@ Laravel HyperPay provides an easy way to handle all the transactions with differ
 You can install the package via composer:
 
 ```bash
-composer require devinweb/laravel-hyperpay
+composer require abdallhsamy/laravel-hyperpay
 ```
 
 ## Database migration
@@ -33,7 +33,7 @@ This migration has a model named `Transaction`, if your app use [multi-tenancy](
 ```php
 
 use Hyn\Tenancy\Traits\UsesTenantConnection;
-use Devinweb\LaravelHyperpay\Models\Transaction as ModelsTransaction;
+use Abdallhsamy\LaravelHyperpay\Models\Transaction as ModelsTransaction;
 
 class Transaction extends ModelsTransaction
 {
@@ -68,7 +68,7 @@ Before start using `Laravel-hyperpay`, add the `ManageUserTransaction` trait to 
 
 ```php
 
-use Devinweb\LaravelHyperpay\Traits\ManageUserTransactions;
+use Abdallhsamy\LaravelHyperpay\Traits\ManageUserTransactions;
 
 class User extends Authenticatable
 {
@@ -103,7 +103,7 @@ To create a transaction in hyperpay using this package, we need to to prepare th
 
 ```php
 
-use Devinweb\LaravelHyperpay\Facades\LaravelHyperpay;
+use Abdallhsamy\LaravelHyperpay\Facades\LaravelHyperpay;
 
 class PaymentController extends  Controller
 {
@@ -131,7 +131,7 @@ php artisan make:billing HyperPayBilling
 then use
 
 ```php
-use Devinweb\LaravelHyperpay\Facades\LaravelHyperpay;
+use Abdallhsamy\LaravelHyperpay\Facades\LaravelHyperpay;
 use App\Billing\HyperPayBilling
 
 LaravelHyperpay::addBilling(new HyperPayBilling())->checkout($trackable_data, $user, $amount, $brand, $request);
@@ -208,7 +208,7 @@ After redirection you can use an action the handle the finalize step
 
 ```php
 
-use Devinweb\LaravelHyperpay\Facades\LaravelHyperpay;
+use Abdallhsamy\LaravelHyperpay\Facades\LaravelHyperpay;
 
 class PaymentController extends Controller
 {
@@ -226,10 +226,10 @@ class PaymentController extends Controller
 
 `Laravel-hyperpay` providers two events during the transaction process, after finalize this package fire for successfull transaction
 
-| Event                                              | Description         |
-| -------------------------------------------------- | ------------------- |
-| Devinweb\LaravelHyperpay\Events\SuccessTransaction | success transaction |
-| Devinweb\LaravelHyperpay\Events\FailTransaction    | fail transaction    |
+| Event                                                 | Description         |
+| ----------------------------------------------------- | ------------------- |
+| Abdallhsamy\LaravelHyperpay\Events\SuccessTransaction | success transaction |
+| Abdallhsamy\LaravelHyperpay\Events\FailTransaction    | fail transaction    |
 
 Each event of them contains the `trackable_data` and `hyperpay_data` that used to prepare the checkout
 
@@ -256,7 +256,7 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
-         'Devinweb\LaravelHyperpay\Events\SuccessTransaction' => [
+         'Abdallhsamy\LaravelHyperpay\Events\SuccessTransaction' => [
             'App\Listeners\TransactionSuccessListener',
         ],
     ];
@@ -304,7 +304,7 @@ class TransactionSuccessListener
 }
 ```
 
-The same you can do with `Devinweb\LaravelHyperpay\Events\FailTransaction` event.
+The same you can do with `Abdallhsamy\LaravelHyperpay\Events\FailTransaction` event.
 
 ### Testing
 
@@ -322,11 +322,11 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ### Security
 
-If you discover any security related issues, please email imad@devinweb.com instead of using the issue tracker.
+If you discover any security related issues, please email abdallhsamy2011[at]gmail.com instead of using the issue tracker.
 
 ## Credits
 
--   [darbaoui imad](https://github.com/devinweb)
+-   [Abdallah Samy](https://github.com/abdallhsamy)
 -   [All Contributors](../../contributors)
 
 ## License
@@ -335,4 +335,4 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 ## Laravel hyperpay Boilerplate
 
-You can use this repository to check the integration of the package [laravel-hyperpay-boilerplate](https://github.com/devinweb/laravel-hyperpay-boilerplate).
+You can use this repository to check the integration of the package [laravel-hyperpay-boilerplate](https://github.com/abdallhsamy/laravel-hyperpay-boilerplate).

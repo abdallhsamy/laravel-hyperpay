@@ -1,6 +1,6 @@
 <?php
 
-namespace Devinweb\LaravelHyperpay\Contracts;
+namespace Abdallhsamy\LaravelHyperpay\Contracts;
 
 interface BillingInterface
 {

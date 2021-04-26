@@ -1,3 +1,6 @@
 {
-    "failed_message": "حدث خطأ في عملية الدفع يرجى المحاولة مرة أخرى."
+    "failed_message": "حدث خطأ في عملية الدفع يرجى المحاولة مرة أخرى.",
+    "The payment was successful.": "تم الدفع بنجاح.",
+    "This payment was already successfully confirmed.": "تم بالفعل تأكيد هذا الدفع بنجاح.",
+    "This payment was cancelled.": "تم إلغاء هذا الدفع."
 }

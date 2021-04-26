@@ -18,13 +18,13 @@ return [
      * if you are using multi-tenant you can create a new model like.
      *
      * use Hyn\Tenancy\Traits\UsesTenantConnection;
-     * use Devinweb\LaravelHyperpay\Models\Transaction as ModelsTransaction;
+     * use Abdallhsamy\LaravelHyperpay\Models\Transaction as ModelsTransaction;
      * class Transaction extends ModelsTransaction {
      *
      *  use UsesTenantConnection;
      *
      * }
      */
-    'transaction_model' => 'Devinweb\LaravelHyperpay\Models\Transaction',
+    'transaction_model' => 'Abdallhsamy\LaravelHyperpay\Models\Transaction',
     'notificationUrl' => '/hyperpay/webhook',
 ];

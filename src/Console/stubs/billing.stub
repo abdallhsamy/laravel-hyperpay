@@ -2,7 +2,7 @@
 
 namespace DummyNamespace;
 
-use Devinweb\LaravelHyperpay\Contracts\BillingInterface;
+use Abdallhsamy\LaravelHyperpay\Contracts\BillingInterface;
 
 class DummyClass implements BillingInterface
 {

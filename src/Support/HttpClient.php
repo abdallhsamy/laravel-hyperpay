@@ -1,6 +1,6 @@
 <?php
 
-namespace Devinweb\LaravelHyperpay\Support;
+namespace Abdallhsamy\LaravelHyperpay\Support;
 
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\RequestException;

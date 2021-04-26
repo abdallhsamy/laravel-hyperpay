@@ -1,6 +1,6 @@
 <?php
 
-namespace Devinweb\LaravelHyperpay\Contracts\Brand;
+namespace Abdallhsamy\LaravelHyperpay\Contracts\Brand;
 
 interface BrandInterface
 {
