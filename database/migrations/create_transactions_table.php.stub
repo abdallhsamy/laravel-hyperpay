@@ -13,7 +13,7 @@ class CreateTransactionsTable extends Migration
             $table->id();
             $table->foreignId('user_id')
                 ->nullable()
-                ->constrained('users)
+                ->constrained('users')
                 ->cascadeOnDelete();
             $table->string('checkout_id')->unique();
             $table->string('status');
