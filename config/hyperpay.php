@@ -14,6 +14,9 @@ return [
     'redirect_url' => '/hyperpay/finalize',
 
     'model' => env('PAYMENT_MODEL', class_exists(App\Models\User::class) ? App\Models\User::class : App\User::class),
+
+    'foreign_key' => env('PAYMENT_MODEL_FOREIGN_KEY', 'user_id'),
+
     /**
      * if you are using multi-tenant you can create a new model like.
      *
