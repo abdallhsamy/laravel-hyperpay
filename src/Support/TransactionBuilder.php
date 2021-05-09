@@ -29,11 +29,14 @@ class TransactionBuilder
      *
      * @param  array  $transactionData
      *
-     * @return \Deviwnweb\LaravelHyperpay\Models\Transaction
+     * @return \Abdallhsamy\LaravelHyperpay\Models\Transaction
      */
-    public function create(array $transactionData)
+    public function create(array $transactionData, $cleanOldTransactions = true)
     {
-        $this->currentUserCleanOldPendingTransaction();
+        if ($cleanOldTransactions) {
+            $this->currentUserCleanOldPendingTransaction();
+        }
+    
 
         $transaction = $this->owner->transactions()->create([
             'id' => Arr::get($transactionData, 'merchantTransactionId'),
@@ -55,7 +58,7 @@ class TransactionBuilder
      *
      * @param string $id
      *
-     * @return null|\Deviwnweb\LaravelHyperpay\Models\Transaction
+     * @return null|\Abdallhsamy\LaravelHyperpay\Models\Transaction
      */
     public function findByIdOrCheckoutId($id)
     {
