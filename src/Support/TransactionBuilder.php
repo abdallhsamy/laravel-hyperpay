@@ -31,12 +31,11 @@ class TransactionBuilder
      *
      * @return \Abdallhsamy\LaravelHyperpay\Models\Transaction
      */
-    public function create(array $transactionData, $cleanOldTransactions = true)
+    public function create(array $transactionData)
     {
-        if ($cleanOldTransactions) {
+        if(config('hyperpay.auto_clean_old_transaction')) {
             $this->currentUserCleanOldPendingTransaction();
         }
-    
 
         $transaction = $this->owner->transactions()->create([
             'id' => Arr::get($transactionData, 'merchantTransactionId'),

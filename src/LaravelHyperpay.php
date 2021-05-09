@@ -96,7 +96,7 @@ class LaravelHyperpay implements Hyperpay
      *
      * @return \GuzzleHttp\Psr7\Response
      */
-    public function checkout(array $trackable_data, Model $user, $amount, $brand, Request $request, $cleanOldTransactions = true)
+    public function checkout(array $trackable_data, Model $user, $amount, $brand, Request $request)
     {
         $this->brand = $brand;
 

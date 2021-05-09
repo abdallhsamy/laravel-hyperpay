@@ -17,6 +17,8 @@ return [
 
     'foreign_key' => env('PAYMENT_MODEL_FOREIGN_KEY', 'user_id'),
 
+    'auto_clean_old_transaction' => true,
+
     /**
      * if you are using multi-tenant you can create a new model like.
      *
