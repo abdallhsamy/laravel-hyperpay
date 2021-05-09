@@ -80,7 +80,7 @@ final class HttpResponse
     {
         $response = $this->response();
         if ($response['status'] == self::HTTP_OK) {
-            (new TransactionBuilder($this->user))->create(array_merge($response, array_merge($this->optionsData, ['trackable_data' => $this->trackable_data])));
+            (new TransactionBuilder($this->user))->create(array_merge($response, array_merge($this->optionsData, ['trackable_data' => $this->trackable_data])), $cleanOldTransactions = true);
             $response = array_merge($response, [
                 'script_url' => $this->script_url,
                 'shopperResultUrl' => $this->shopperResultUrl,
